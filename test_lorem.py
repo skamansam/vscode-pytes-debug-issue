@@ -1,10 +1,13 @@
 from lorem_text import lorem
+from numpy import number
 
+# adjust this to determine slowness.
+# slowness starts around 1500 for me
+number_lines_output = 10000
 
 # content of test_sample.py
 def func(x):
-    # slowness starts around 1500
-    for i in range(10000):
+    for i in range(number_lines_output):
        print(lorem.paragraph())
     return x + 1
 
